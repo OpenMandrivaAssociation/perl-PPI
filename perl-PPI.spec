@@ -1,6 +1,6 @@
 %define module	PPI
 %define name	perl-%{module}
-%define version	1.118
+%define version	1.201
 %define	release	%mkrel 1
 
 Name:		%{name}
