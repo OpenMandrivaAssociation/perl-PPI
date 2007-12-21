@@ -24,6 +24,7 @@ BuildRequires:	perl(Test::ClassAPI)
 BuildRequires:  perl(IO::String)
 BuildRequires:  perl(Test::Object)
 BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 PPI is a Perl document parser.
