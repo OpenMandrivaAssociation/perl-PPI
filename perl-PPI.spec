@@ -1,18 +1,16 @@
-%define module	PPI
-%define name	perl-%{module}
-%define version	1.203
-%define	release	%mkrel 2
+%define upstream_name	 PPI
+%define upstream_version 1.205
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Parse, Analyze and Manipulate Perl without perl
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/PPI/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-Requires:	perl >= 2:5.8.7-4mdk
-BuildRequires:	perl >= 2:5.8.7-4mdk
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/PPI/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
@@ -24,13 +22,13 @@ BuildRequires:	perl(Test::ClassAPI)
 BuildRequires:  perl(IO::String)
 BuildRequires:  perl(Test::Object)
 BuildArch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 PPI is a Perl document parser.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 Changes
 find lib -name '*.pm' | xargs chmod 644
 
@@ -54,6 +52,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/PPI
 %{perl_vendorlib}/PPI.pm
 %{_mandir}/*/*
-
-
-
