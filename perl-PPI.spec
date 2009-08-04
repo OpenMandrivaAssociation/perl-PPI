@@ -16,13 +16,16 @@ Buildrequires:	perl-devel
 %endif
 BuildRequires:	perl(Clone)
 BuildRequires:	perl(File::Remove)
+BuildRequires:  perl(IO::String)
 BuildRequires:	perl(IO::Stringy)
-BuildRequires:	perl(List::Util)      >= 1.200.0
+BuildRequires:	perl(List::Util)       >= 1.200.0
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(Params::Util)
-BuildRequires:	perl(Test::ClassAPI)
-BuildRequires:  perl(IO::String)
 BuildRequires:  perl(Task::Weaken)
+BuildRequires:	perl(Test::ClassAPI)
+BuildRequires:	perl(Test::More)       >= 0.860.0
+BuildRequires:	perl(Test::NoWarnings)
+BuildRequires:	perl(Test::SubCalls)
 BuildRequires:  perl(Test::Object)
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
