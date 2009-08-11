@@ -1,5 +1,5 @@
 %define upstream_name	 PPI
-%define upstream_version 1.205
+%define upstream_version 1.206
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
