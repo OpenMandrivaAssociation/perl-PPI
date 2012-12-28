@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	6
 
 Summary:	Parse, Analyze and Manipulate Perl without perl
 License:	GPL+ or Artistic
@@ -14,17 +14,18 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/PPI/%{upstream_name}-%{up
 BuildRequires:	perl-devel
 BuildRequires:	perl(Clone)
 BuildRequires:	perl(File::Remove)
-BuildRequires:  perl(IO::String)
+BuildRequires: 	perl(IO::String)
 BuildRequires:	perl(IO::Stringy)
 BuildRequires:	perl(List::Util)       >= 1.200.0
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(Params::Util)
-BuildRequires:  perl(Task::Weaken)
+BuildRequires:	perl(Task::Weaken)
 BuildRequires:	perl(Test::ClassAPI)
 BuildRequires:	perl(Test::More)       >= 0.860.0
 BuildRequires:	perl(Test::NoWarnings)
 BuildRequires:	perl(Test::SubCalls)
-BuildRequires:  perl(Test::Object)
+BuildRequires:	perl(Test::Object)
+BuildRequires:	perl(Class::Inspector)
 BuildArch:	noarch
 
 %description
