@@ -1,10 +1,10 @@
 %define modname	PPI
-%define modver 1.218
+%define modver 1.220
 
 Summary:	Parse, Analyze and Manipulate Perl without perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -35,7 +35,7 @@ chmod 644 Changes
 find lib -name '*.pm' | xargs chmod 644
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
