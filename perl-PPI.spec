@@ -1,14 +1,14 @@
 %define modname	PPI
-%define modver 1.220
+%define modver 1.291
 
 Summary:	Parse, Analyze and Manipulate Perl without perl
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/Perl-Critic/PPI
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/PPI-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
